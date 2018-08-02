@@ -1,0 +1,214 @@
+@import '_normalize';
+@import '_slick';
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+$text-font:'Poppins', sans-serif;
+$bg-slide:#e1e1e9;
+$bg-slide-hover:#1bf1ad;
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 0.52vw;
+}
+
+body {
+	width: 100%;
+	font: 400 1.8rem/1.1 $text-font;
+	min-height: 100%;
+	background:#fff;
+
+	
+
+}
+
+.container {
+	width: 64%;
+	//height: 100vh;
+	margin: 6rem auto;
+	padding: 1.5rem;
+	text-align: center;
+	
+
+// new
+.header {
+	&__over-title {
+		color: #303030;
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		text-align: center;
+		font-weight: 600;
+	}
+	&__title {
+		font-size: 8.6rem;
+		font-weight: 700;
+		color: #000;
+		max-width: 90%;
+		text-transform: uppercase;
+		margin: 3rem 0;
+	}
+}
+
+
+
+// newend
+
+
+}
+.cross {
+	position: absolute;
+		top: 8rem;
+		left: 124rem;
+		
+		width: 3rem;
+		height: 3rem;  
+		
+}
+.triang {
+	position: absolute;
+		top: 25rem;
+		left: 30rem;
+		width: 4.5rem;
+		height: 4.5rem; 
+}
+.slider {
+	margin-left:11rem ;
+	position: relative;
+	//outline: 1px solid red;
+}
+.slide {
+	
+	
+	height:40rem;
+	width: 44rem;
+	overflow: hidden;
+	padding: 0;
+	
+	//background:$bg-slide;
+	margin: 0 0 0 2.2rem;
+	position: relative;
+	font-size: 0;
+	
+
+	&__img {
+		padding: 0;
+		margin: 0;
+		
+		width: 44rem;
+		//height: auto;
+		display: block;
+	}
+	&__cover {
+		position: absolute;
+		top: 0;
+		left: 0; 
+		right: 0;
+		bottom: 0;
+		background-color: $bg-slide-hover;
+		opacity: 0;
+		//padding: 3rem;
+		text-transform: uppercase;
+		color: #fff;
+		&:hover,
+ 		&:focus{
+ 		opacity: 0.7;
+ 		}
+	}
+	&__text {
+		font-size: 0;
+		position: absolute;
+		left: 3rem;
+		bottom: 3rem;
+	}
+	&__title {
+		font-size: 2.8rem;
+		font-weight: 700;
+		line-height: 1;
+		margin: 0;
+
+	}
+	&__subtitle {
+		font-size: 2.8rem;
+		font-weight: 700;
+		line-height: 1;
+		margin: 0;
+
+	}
+	&__author {
+		font-weight: 600;
+		font-size: 1.2rem;
+		line-height: 2;
+	}
+
+}
+
+
+
+.slick-arrow {
+	position: absolute;
+	height: 100%;
+	width: 10rem;
+	top: 0;
+	z-index: 5;
+	font-size: 0;
+	background-color:transparent;
+	border: none;
+	background-image:url(../img/arrow-circkle-2.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.6s ease;
+	&:hover,
+ 	&:focus{
+ 		
+ 	}
+
+}
+.slick-next {
+	right:0;
+}
+.slick-prev {
+	left:-10rem;
+	transform:rotate(180deg);
+}
+.slick-dots {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	li {
+		display: inline-block;
+		margin: 10px;
+		button{
+			font-size: 0;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: none;
+		outline: none;
+		background:rgb(255,255,255);
+		opacity: 0.5;
+		
+		&:hover,
+ 		&:focus{
+		opacity: 1;
+		}
+		 }
+		 &.slick-active{
+		 	button{
+		opacity: 1;
+		}
+		
+	}
+		
+		
+	}
+}
